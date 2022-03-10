@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const express = require("express");
 
 const server = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 server.get('/', (req, res) => {
     res.end('<h1>hello world</h1>');
